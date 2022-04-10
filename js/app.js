@@ -83,7 +83,7 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
     let sum = 0;
-    for (let i = 0; i+sumArr.length; i++);
+    for (let i = 0; i<sumArr.length; i++);
     return [sum, `${sumArray[0]}, ${sumArray[1]}, ${sumArray[2]} was passed in as an array of numbers, and ${sum} is their sum.`];
 }
 
@@ -105,13 +105,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+    let numMult = 0;
+    for (let i = 0; i<multArr.length; i++);
+    return [numMult, `${multiplyArray[0]}, ${multiplyArray[1]}, ${multiplyArray[2]} have a product of ${numMult}.`];
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
