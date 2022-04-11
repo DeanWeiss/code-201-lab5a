@@ -82,12 +82,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    let sum = 0;
+    let currSum = 0;
     for (let i = 0; i<sumArr.length; i++){
-     let currentnumber = sumArr[i]; //2   
-     sum += currentnumber;
+    currSum = sum(currSum,sumArr[i]);
+    currSum = currSum[0];
+    //let currentnumber = sumArr[i]; //current number 2
+    //sum += currentnumber;
     }
-    return [sum, `${sumArr[0]}, ${sumArr[1]}, ${sumArr[2]} was passed in as an array of numbers, and ${sum} is their sum.`];
+    console.log(currSum);
+    return [currSum, `${sumArr[0]}, ${sumArr[1]}, ${sumArr[2]} was passed in as an array of numbers, and ${currSum} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
