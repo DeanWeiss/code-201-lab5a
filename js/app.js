@@ -90,7 +90,8 @@ function sumArray(sumArr) { //eslint-disable-line
     //sum += currentnumber;
     }
     console.log(currSum);
-    return [currSum, `${sumArr[0]}, ${sumArr[1]}, ${sumArr[2]} was passed in as an array of numbers, and ${currSum} is their sum.`];
+    return [currSum, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${currSum} is their sum.`];
+    // '2,3,4 was passed in as an array of numbers, and 9 is their sum.'
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -111,11 +112,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-    let numMult = 0;{
-        numMult += multArr[0];
+    let numMult = multArr[0];
+    for (let i = 1; i<multArr.length; i++){
+    numMult = multiply(numMult,multArr[i]);
+    numMult = numMult[0];
     }
-    for (let i = 0; i<=multArr.length; i++);
-    return [numMult, `${multiplyArray[0]}, ${multiplyArray[1]}, ${multiplyArray[2]} have a product of ${numMult}.`];
+    console.log(numMult);
+    return [numMult, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${numMult}.`];
 
 }
 
